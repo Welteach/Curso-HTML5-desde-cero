@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <style>
+        table {
+            text-align: center;
+            background-color: #F96;
+            width: 25%;
+            margin: 0 auto;
+            margin-top: 30px;
+            border: 2px #F30 dashed;
+        }
+
+        td {
+            padding: 15px;
+        }
+    </style>
+    <script>
+        var nombre;
+        var apellido;
+
+        function comenzar(){
+            nombre = document.getElementById('nombre');
+            apellido = document.getElementById('apellido');
+
+            nombre.addEventListener('input', validar, false);
+            apellido.addEventListener('input', validar, false);
+
+            validar();
+        }
+
+        function validar(){
+            if(nombre.value == "" && apellido.value == ""){
+                nombre.setCustomValidity('Introduce un nombre o apellido');
+
+                nombre.style.background = '#FFDDDD';
+                apellido.style.background = '#FFDDDD';
+
+            }else{
+
+                nombre.setCustomValidity('');
+
+                nombre.style.background = '#FFFFFF';
+                apellido.style.background = '#FFFFFF';
+
+            }
+        }
+
+        window.addEventListener('load', comenzar, false);
+    </script>
+</head>
+<body>
+    <section>
+        <form name="registro" method="get">
+            <table>
+                <tr>
+                    <td>Nombre:</td>
+                    <td><input type="text" name="nombre" id="nombre"></td>
+                </tr>
+                <tr>
+                    <td>Apellido:</td>
+                    <td><input type="text" name="apellido" id="apellido"></td>
+                </tr>
+                <tr>
+                    <td>Edad:</td>
+                    <td><input type="number" name="edad" id="edad"></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" id="registrar" value="Registrar"></td>
+                </tr>
+            </table>
+        </form>
+    </section>
+</body>
+</html>

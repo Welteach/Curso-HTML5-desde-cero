@@ -1,0 +1,40 @@
+/*
+body {
+    background-color: #00F;
+}
+
+header {
+    background-color: #00F;
+}
+*/
+#header-principal {
+    background-color: #00F;
+    padding: 7px;
+    text-align: center;
+}
+#nav-principal {
+    background-color: #F00;
+}
+li {
+    background-color: #FF0;
+    display: inline;
+}
+#aside-principal {
+    background-color: #0F0;
+    float: left;
+    height: 900px;
+}
+#section-principal {
+    background-color: #606;
+    margin-left: 200px;
+    padding-top: 15px;
+    padding-left: 15px;
+}
+#footer-principal {
+    background-color: #FF0;
+    margin-top: 30px;
+    text-align: center;
+}
+img {
+    width: 300px;
+}
